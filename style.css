@@ -1,76 +1,89 @@
-/* General Reset */
-* {
+/* Reset some basic elements */
+body, h1, h2, h3, h4, h5, p, a, div {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* General body styling */
 body {
     font-family: Arial, sans-serif;
-    line-height: 1.6;
-    background: #f4f4f9;
+    background-color: #f4f4f9;
     color: #333;
-    margin: 0;
-    padding: 0;
+    line-height: 1.6;
 }
 
+/* Container */
 .container {
     max-width: 1200px;
-    margin: auto;
+    margin: 0 auto;
     padding: 20px;
 }
 
-/* Profile Card */
+/* Profile card styling */
 .profile-card {
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
     background: #fff;
-    border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
+    border-radius: 8px;
+    padding: 20px;
     margin-bottom: 30px;
 }
 
 .profile-pic img {
-    width: 100%;
-    height: auto;
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
-    max-width: 150px;
-    margin: 20px auto;
-    display: block;
+    border: 3px solid #ddd;
 }
 
 .profile-details {
     flex: 1;
-    padding: 20px;
+    margin-left: 20px;
 }
 
 .profile-details h2 {
-    font-size: 1.8rem;
+    font-size: 24px;
     margin-bottom: 10px;
-    text-align: center;
 }
 
 .profile-details h4 {
-    color: #666;
-    text-align: center;
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 10px;
 }
 
-.social {
-    text-align: center;
-    margin-top: 15px;
+.profile-details .social a {
+    margin-right: 10px;
+    font-size: 20px;
 }
 
-.social a {
-    margin: 0 10px;
-    font-size: 1.2rem;
-    color: #666;
+.profile-details .social a i {
+    transition: transform 0.3s;
+}
+
+.profile-details .social a:hover i {
+    transform: scale(1.2);
+}
+
+.download-btn {
+    display: inline-block;
+    margin-top: 20px;
+    background: #007BFF;
+    color: #fff;
+    padding: 10px 20px;
     text-decoration: none;
-    transition: color 0.3s ease;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s;
 }
 
-.social a:hover {
-    color: #000;
+.download-btn:hover {
+    background: #0056b3;
 }
 
 /* Contact Info */
@@ -81,116 +94,101 @@ body {
 .contact-info .row {
     display: flex;
     align-items: center;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
-.contact-info .icon {
-    flex-shrink: 0;
-    font-size: 1.5rem;
+.contact-info .row .icon {
     margin-right: 10px;
+    font-size: 20px;
 }
 
-.contact-info .content span {
-    font-size: 0.9rem;
-    color: #666;
-}
-
-.contact-info .content h5 {
-    margin-top: 5px;
-    font-size: 1rem;
-    font-weight: normal;
-}
-
-.download-btn {
+.contact-info .row .content span {
+    font-weight: bold;
     display: block;
-    margin: 20px auto;
-    padding: 10px 20px;
-    border: none;
-    background: #333;
-    color: #fff;
-    font-size: 1rem;
-    border-radius: 5px;
-    text-align: center;
-    text-decoration: none;
-    cursor: pointer;
-    transition: background 0.3s ease;
-}
-
-.download-btn:hover {
-    background: #555;
 }
 
 /* About Section */
 .about {
     background: #fff;
-    padding: 20px;
-    border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 30px;
 }
 
 .about h1 {
-    font-size: 1.8rem;
+    font-size: 28px;
     margin-bottom: 15px;
 }
 
 .about p {
     margin-bottom: 15px;
-    line-height: 1.6;
 }
 
-.work {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
+.about .work {
     margin-top: 20px;
 }
 
 .workbox {
-    background: #f9f9f9;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 15px;
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
 }
 
 .workbox .icon img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-    margin-bottom: 10px;
+    width: 50px;
+    height: 50px;
+    margin-right: 15px;
+    border-radius: 8px;
+    border: 2px solid #ddd;
 }
 
-.workbox h3 {
-    font-size: 1.2rem;
-    margin-bottom: 10px;
-    color: #333;
-}
-
-.workbox p {
-    font-size: 0.9rem;
-    color: #555;
-    line-height: 1.5;
+.workbox .desc h3 {
+    font-size: 20px;
+    margin-bottom: 5px;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
     .profile-card {
         flex-direction: column;
-    }
-
-    .profile-details {
+        align-items: center;
         text-align: center;
     }
 
-    .contact-info .row {
+    .profile-details {
+        margin: 20px 0;
+    }
+
+    .workbox {
         flex-direction: column;
         align-items: flex-start;
     }
 
-    .contact-info .content {
-        margin-top: 5px;
+    .workbox .icon {
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-pic img {
+        width: 100px;
+        height: 100px;
     }
 
-    .work {
-        grid-template-columns: 1fr;
+    .profile-details h2 {
+        font-size: 20px;
+    }
+
+    .profile-details h4 {
+        font-size: 16px;
+    }
+
+    .download-btn {
+        padding: 8px 16px;
+    }
+
+    .about h1 {
+        font-size: 24px;
     }
 }
