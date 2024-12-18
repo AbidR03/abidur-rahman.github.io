@@ -49,6 +49,8 @@ body{
 }
 .profile-card .profile-pic img{
     border-radius: 10px;
+    width:400px;
+    min-height: 400px;
 }
 .profile-card .profile-details{
     display: flex;
