@@ -42,6 +42,7 @@ body{
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
+    text-align: center;
 }
 .profile-card .profile-pic{
     margin-top: 15px;
@@ -49,8 +50,10 @@ body{
 }
 .profile-card .profile-pic img{
     border-radius: 10px;
-    width:400px;
-    min-height: 400px;
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
 }
 .profile-card .profile-details{
     display: flex;
@@ -67,6 +70,7 @@ body{
 }
 .profile-details .intro h2{
     margin-top: 20px;
+    margin-bottom: 15px;
 }
 .profile-details .intro h4{
     background: #1d1d1d;
@@ -74,6 +78,7 @@ body{
     border-radius: 4px;
     padding: 5px 10px;
     margin: 8px;
+    margin-bottom: 15px;
 }
 .profile-details .intro .social{
     margin-top: 10px;
@@ -124,6 +129,9 @@ body{
     border:1px solid rgba(255,255,255,0.1);
 }
 .row .content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     min-width: 70%;
 }
 .row .content span{
@@ -181,11 +189,15 @@ body{
     border:1px solid #333;
     padding: 1rem;
     margin:1rem;
+    align-items: center;
+    text-align: left;
 
 }
 .work .workbox .desc{
     width:75%;
     color:#555;
+    margin: auto 0;
+    margin-bottom: 15px;
 }
 .work .workbox .desc h3{
     color:#f2f2f2;
